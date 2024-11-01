@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"os"
 	"strconv"
-
 	"github.com/joho/godotenv"
 )
 
@@ -31,7 +30,7 @@ func initConfig() Config {
 		DBAddress:              fmt.Sprintf("%s:%s", getEnv("DB_HOST", "127.0.0.1"), getEnv("DB_ADDRESS", "3306")),
 		DBName:                 getEnv("DB_NAME", "ecommerce"),
 		JWTExpirationInSeconds: getEnvAsInt("JWT_EXP", 3600*24*7),
-		JWTSecret:              getEnv("JWT_SECRET", "&{{0x100fbd6c0 31431307126063239413208006610111743241390025104733878431072934547742865764297 75202333322972911162231701802589876242142445538440510487411104117766459204330} 62150009688194951205945112449993017526523016209094038363683755762134157587011}"),
+		JWTSecret:              getEnv("JWT_SECRET", "not-so-secret-anymore?"),
 	}
 }
 
