@@ -2,13 +2,12 @@ package cart
 
 import (
 	"fmt"
-	"net/http"
-
 	"github.com/HimandriSharma/ecommerce/service/auth"
 	"github.com/HimandriSharma/ecommerce/types"
 	"github.com/HimandriSharma/ecommerce/utils"
 	"github.com/go-playground/validator"
 	"github.com/gorilla/mux"
+	"net/http"
 )
 
 type Handler struct {
