@@ -17,7 +17,7 @@ type Handler struct {
 func NewHandler(store types.ProductStore) *Handler {
 	return &Handler{store: store}
 }
-func (h *Handler) RegisterRouter(router *mux.Router) {
+func (h *Handler) RegisterRoutes(router *mux.Router) {
 	router.HandleFunc("/products", h.handleCreateProduct).Methods(http.MethodGet)
 	router.HandleFunc("/products", h.handleCreateProduct).Methods(http.MethodPost)
 }
